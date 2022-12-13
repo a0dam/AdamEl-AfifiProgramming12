@@ -1,0 +1,25 @@
+public class haporsad {
+    public static void main(String[] args) {
+       
+        Scanner scanner = new Scanner(System.in);
+
+        
+        String line = scanner.nextLine();
+
+     
+        int hap = 0;
+        int sad = 0;
+        for (int i = 0; i < line.length() - 2; i++) {
+            String substr = line.substring(i, i + 3);
+            if (substr.equals(":-)")) {hap++;}
+            else if (substr.equals(":-(")) {sad++;}
+        }
+
+        // Print the result
+        if (hap == 0 && sad == 0) {
+            System.out.println("none detected");}
+        else if (hap == sad) {System.out.println("unsure");}
+        else if (hap > sad) {System.out.println("happy");}
+        else {System.out.println("sad");}
+    }
+}
